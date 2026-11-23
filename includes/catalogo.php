@@ -1,0 +1,857 @@
+<?php
+
+// catalogo fijo de programas y actividades; no depende de archivos json
+return [
+    'bebes' => [
+        'nombre' => 'estimulacion temprana en casa',
+        'para' => 'bebes y ninos pequenos',
+        'imagen' => 'img/estimulacion-temprana.jpg',
+        'resumen' => 'juegos sencillos para que tu bebe o nino pequeno explore, mueva su cuerpo y se comunique. duran pocos minutos y se hacen con objetos de casa.',
+        'para_quien' => [
+            'bebes y ninos pequenos que quieren practicar entre consultas',
+            'familias que no pueden ir seguido a apac',
+            'papas y mamas que quieren aprender a jugar para estimular el desarrollo',
+        ],
+        'materiales' => [
+            'una manta o tapete limpio en el piso',
+            'un juguete de colores, grande y seguro',
+            'una toalla enrollada o un cojin firme',
+        ],
+        'antes_de_empezar' => [
+            'hazlo cuando el bebe este despierto, tranquilo y descansado',
+            'quedate siempre a su lado: nunca lo dejes solo ni dormido boca abajo',
+            'retira objetos pequenos que pueda tragar',
+            'sesiones cortas: si se cansa o llora, termina y vuelve a intentar mas tarde',
+        ],
+        'detente_si' => [
+            'el bebe llora de forma intensa o se ve incomodo',
+            'se pone morado, tose o le cuesta respirar (busca atencion medica de inmediato)',
+            'notas que un brazo o una pierna no se mueve igual que el otro (consulta a un medico)',
+        ],
+        'frecuencia' => 'sesiones de 5 a 10 minutos, una o varias veces al dia si el bebe lo disfruta. pide a un terapeuta que confirme que actividades son adecuadas para su edad y condicion.',
+        'relacionados' => [
+            'sentidos',
+            'lenguaje',
+        ],
+        'actividades' => [
+            'boca-abajo' => [
+                'nombre' => 'tiempo boca abajo',
+                'duracion' => '2 a 5 minutos',
+                'objetivo' => 'fortalecer el cuello, la espalda y los brazos.',
+                'materiales' => [
+                    'manta limpia',
+                    'un juguete de colores',
+                ],
+                'pasos' => [
+                    'coloca una manta limpia en el piso.',
+                    'con el bebe despierto, acuestalo boca abajo sobre la manta.',
+                    'ponte frente a el, a su altura, y hablale o cantale.',
+                    'muestrale un juguete de colores frente a su cara para que intente levantar la cabeza.',
+                    'termina cuando se canse o se queje y cargalo.',
+                ],
+                'consejos' => [
+                    'si le cuesta, pon una toalla enrollada bajo su pecho y axilas.',
+                    'acuestate tu tambien boca abajo frente a el: le encantara.',
+                ],
+                'mas_facil' => 'hazlo por solo 1 minuto y apoyalo con la toalla enrollada.',
+                'cuidado' => 'solo con el bebe despierto y vigilado. para dormir, siempre boca arriba.',
+            ],
+            'seguir-juguete' => [
+                'nombre' => 'seguir el juguete con la mirada',
+                'duracion' => '2 a 3 minutos',
+                'objetivo' => 'estimular la vista y el control de la cabeza.',
+                'materiales' => [
+                    'un juguete de colores llamativos',
+                ],
+                'pasos' => [
+                    'acuesta al bebe boca arriba sobre una superficie firme.',
+                    'sosten el juguete a unos 20 o 30 centimetros de su cara.',
+                    'espera a que lo mire y hablale con voz suave.',
+                    'mueve el juguete despacio hacia un lado, luego al otro y hacia arriba.',
+                    'repite 3 a 5 veces y felicitalo con una sonrisa.',
+                ],
+                'consejos' => [
+                    'si pierde el interes, cambia de juguete o de ritmo.',
+                    'hazlo en un lugar tranquilo, sin television.',
+                ],
+                'mas_facil' => 'mueve el juguete solo un poco y mas lento.',
+                'cuidado' => 'mueve el juguete despacio y sin acercarlo de golpe a sus ojos.',
+            ],
+            'alcanzar-agarrar' => [
+                'nombre' => 'alcanzar y agarrar',
+                'duracion' => '3 a 5 minutos',
+                'objetivo' => 'practicar la coordinacion entre ojos y manos.',
+                'materiales' => [
+                    'sonaja o juguete liviano',
+                    'cojines',
+                ],
+                'pasos' => [
+                    'si el bebe ya se sostiene sentado con apoyo, sientalo con cojines a los lados. si no, dejalo boca arriba.',
+                    'ofrece la sonaja a una distancia a la que pueda alcanzarla.',
+                    'espera a que estire la mano; ayudalo suavemente si hace falta.',
+                    'cuando la agarre, celebra y dejalo explorarla.',
+                    'cambia de lado y repite.',
+                ],
+                'consejos' => [
+                    'ofrece el juguete por ambos lados.',
+                    'hablale mientras juega: lo tomaste!.',
+                ],
+                'mas_facil' => 'acerca el juguete hasta que toque su mano.',
+                'cuidado' => 'usa solo juguetes grandes y sin piezas sueltas. si aun no se sostiene sentado, no lo sientes solo.',
+            ],
+        ],
+    ],
+    'movilidad' => [
+        'nombre' => 'movilidad y fuerza en casa',
+        'para' => 'ninos, adultos y adultos mayores',
+        'imagen' => 'img/terapia-fisica.jpg',
+        'resumen' => 'ejercicios suaves, sentado y con apoyo, para mantener o mejorar el movimiento de brazos y piernas.',
+        'para_quien' => [
+            'personas que se recuperan de una lesion o tienen poca movilidad',
+            'adultos mayores que quieren mantenerse activos',
+            'familias que no pueden llevar a su familiar a terapia con frecuencia',
+        ],
+        'materiales' => [
+            'una silla firme, sin ruedas y con respaldo',
+            'una pared o mueble pesado para que la silla no se mueva',
+            'calzado cerrado y antiderrapante',
+            'una persona cerca para ayudar',
+        ],
+        'antes_de_empezar' => [
+            'pregunta a tu medico o terapeuta si puedes hacer estos ejercicios, sobre todo si tuviste una cirugia, fractura o problema del corazon',
+            'haz los movimientos lentos y sin rebotes',
+            'respira con calma: no aguantes la respiracion',
+            'un poco de cansancio es normal; el dolor no',
+        ],
+        'detente_si' => [
+            'sientes dolor, mareo o falta de aire',
+            'una articulacion se inflama o se pone caliente',
+            'sientes que pierdes el equilibrio o te vas a caer',
+            'si sientes dolor u opresion en el pecho que no cede, llama a emergencias',
+        ],
+        'frecuencia' => 'empieza con 5 a 8 repeticiones de cada ejercicio, 3 o 4 dias a la semana, con descansos. aumenta poco a poco y solo si te sientes bien. tu terapeuta puede ajustar los numeros.',
+        'relacionados' => [
+            'sentidos',
+            'bebes',
+        ],
+        'actividades' => [
+            'brazos-al-frente' => [
+                'nombre' => 'levantar los brazos al frente',
+                'duracion' => '3 a 5 minutos',
+                'objetivo' => 'mantener el movimiento de hombros y brazos.',
+                'materiales' => [
+                    'silla firme',
+                ],
+                'pasos' => [
+                    'sientate con la espalda recta y apoyada en el respaldo.',
+                    'apoya los pies completamente en el piso.',
+                    'con los brazos estirados, levantalos al frente hasta la altura de los hombros, o hasta donde puedas.',
+                    'manten 2 segundos y bajalos despacio.',
+                    'repite 5 a 8 veces.',
+                ],
+                'consejos' => [
+                    'puedes levantar un brazo a la vez.',
+                    'saca el aire al subir y toma aire al bajar.',
+                ],
+                'mas_facil' => 'sube solo hasta donde llegues sin dolor, o pide a otra persona que sostenga tus brazos.',
+                'cuidado' => 'si tienes dolor en el hombro o te operaron, consulta antes.',
+            ],
+            'extension-rodilla' => [
+                'nombre' => 'estirar la pierna sentado',
+                'duracion' => '5 minutos',
+                'objetivo' => 'fortalecer el muslo y mejorar el control de la pierna.',
+                'materiales' => [
+                    'silla firme',
+                ],
+                'pasos' => [
+                    'sientate al fondo de la silla con la espalda apoyada.',
+                    'pon las manos sobre los muslos o a los lados del asiento.',
+                    'estira una rodilla hasta que la pierna quede lo mas recta posible.',
+                    'manten 2 o 3 segundos y baja la pierna despacio.',
+                    'repite 5 a 8 veces y cambia de pierna.',
+                ],
+                'consejos' => [
+                    'no bloquees la rodilla con fuerza.',
+                    'cuenta en voz alta para llevar el ritmo.',
+                ],
+                'mas_facil' => 'estira la pierna solo a la mitad del recorrido.',
+                'cuidado' => 'si tienes dolor de rodilla o cadera, o una protesis, pregunta a tu medico.',
+            ],
+            'pararse-sentarse' => [
+                'nombre' => 'pararse y sentarse con apoyo',
+                'duracion' => '5 minutos',
+                'objetivo' => 'ganar fuerza en las piernas para levantarte con mas seguridad.',
+                'materiales' => [
+                    'silla firme contra la pared',
+                    'una persona que te acompane',
+                ],
+                'pasos' => [
+                    'coloca la silla contra la pared para que no se mueva.',
+                    'sientate al borde del asiento, con los pies separados y debajo de las rodillas.',
+                    'inclina el cuerpo un poco hacia adelante y empuja con las piernas para ponerte de pie. puedes apoyarte en otra persona.',
+                    'quedate de pie un momento, estable.',
+                    'sientate despacio, llevando la cadera hacia atras, sin dejarte caer.',
+                    'repite 3 a 5 veces.',
+                ],
+                'consejos' => [
+                    'pide a alguien que este a tu lado todo el tiempo.',
+                    'mira al frente, no al piso.',
+                ],
+                'mas_facil' => 'usa una silla mas alta, con un cojin firme, y apoyate con las dos manos.',
+                'cuidado' => 'este ejercicio puede causar caidas. hazlo siempre con alguien cerca. si hay mareo, no lo hagas.',
+            ],
+        ],
+    ],
+    'lenguaje' => [
+        'nombre' => 'comunicacion y lenguaje en casa',
+        'para' => 'ninos y adultos',
+        'imagen' => 'img/lenguaje.jpg',
+        'resumen' => 'actividades de juego y conversacion para practicar el habla, la comprension y el control de la boca.',
+        'para_quien' => [
+            'ninos que hablan poco o les cuesta pronunciar',
+            'personas que recuperan el habla y practican con su familia',
+            'familias que quieren reforzar lo que trabajan con su terapeuta',
+        ],
+        'materiales' => [
+            'objetos de la casa (taza, pelota, cuchara)',
+            'un cuento con dibujos grandes',
+            'burbujas de jabon con varita',
+            'un lugar tranquilo, sin television ni ruido',
+        ],
+        'antes_de_empezar' => [
+            'habla despacio, con frases cortas y mirando a la cara',
+            'dale tiempo para responder: espera unos 5 segundos antes de ayudar',
+            'celebra los intentos, aunque no salga perfecto',
+            'mejor un poco todos los dias que mucho un solo dia',
+        ],
+        'detente_si' => [
+            'la persona se frustra o se cansa mucho: cambia de actividad o descansa',
+            'se atraganta o tose al comer o beber: estos juegos no sustituyen una valoracion, consulta a un profesional',
+            'hay un cambio repentino al hablar, cara caida o brazo debil: llama a emergencias',
+        ],
+        'frecuencia' => '10 a 15 minutos al dia, en ratos cortos. un terapeuta de lenguaje puede indicarte que sonidos o palabras practicar.',
+        'relacionados' => [
+            'bebes',
+            'sentidos',
+        ],
+        'actividades' => [
+            'nombrar-objetos' => [
+                'nombre' => 'nombrar objetos de la casa',
+                'duracion' => '5 a 10 minutos',
+                'objetivo' => 'ampliar el vocabulario y animar a decir palabras.',
+                'materiales' => [
+                    '3 a 5 objetos conocidos',
+                    'una mesa',
+                ],
+                'pasos' => [
+                    'reune 3 a 5 objetos conocidos, como una pelota, una taza y una cuchara.',
+                    'sientense juntos frente a una mesa, cara a cara.',
+                    'muestra un objeto, miralo a los ojos y di su nombre con claridad.',
+                    'espera unos segundos a que lo repita o lo senale. si lo intenta, celebralo!',
+                    'repite con cada objeto y luego pregunta: donde esta la pelota?.',
+                ],
+                'consejos' => [
+                    'usa objetos que le gusten.',
+                    'si dice solo una parte de la palabra, repite la palabra completa con carino, sin corregir con dureza.',
+                ],
+                'mas_facil' => 'empieza con solo 2 objetos y acepta que los senale.',
+                'cuidado' => 'no presiones. si se frustra, cambia de juego.',
+            ],
+            'cuento-preguntas' => [
+                'nombre' => 'cuento con preguntas',
+                'duracion' => '10 minutos',
+                'objetivo' => 'practicar la atencion, la comprension y la expresion.',
+                'materiales' => [
+                    'un cuento con dibujos grandes',
+                ],
+                'pasos' => [
+                    'elige un cuento corto con dibujos grandes y sientense juntos, cerca.',
+                    'lee despacio y con voz expresiva, senalando los dibujos.',
+                    'en cada pagina haz una pregunta sencilla: que ves? o quien es?.',
+                    'espera su respuesta, aunque sea con un gesto o un sonido.',
+                    'al final, pidele que te cuente que fue lo que mas le gusto.',
+                ],
+                'consejos' => [
+                    'repite el mismo cuento varios dias: la repeticion ayuda.',
+                    'imita los sonidos de animales y objetos.',
+                ],
+                'mas_facil' => 'usa libros con una sola imagen por pagina y pidele que la senale.',
+                'cuidado' => '',
+            ],
+            'soplar-burbujas' => [
+                'nombre' => 'soplar burbujas',
+                'duracion' => '5 minutos',
+                'objetivo' => 'fortalecer los labios y controlar el aire al hablar.',
+                'materiales' => [
+                    'burbujas de jabon con varita',
+                ],
+                'pasos' => [
+                    'sientense frente a frente.',
+                    'moja la varita en el liquido de burbujas.',
+                    'muestrale como hacer una o con los labios y soplar suave.',
+                    'pidele que sople para hacer burbujas y celebra cada una.',
+                    'alternen: soplar fuerte, soplar suave, y reventar las burbujas juntos.',
+                ],
+                'consejos' => [
+                    'si no tienes burbujas, puedes soplar una pluma o una tira de papel ligero.',
+                ],
+                'mas_facil' => 'sopla tu las burbujas y deja que el las reviente y las nombre.',
+                'cuidado' => 'el liquido de burbujas no se toma. guardalo lejos de los ninos pequenos.',
+            ],
+        ],
+    ],
+    'sentidos' => [
+        'nombre' => 'estimulacion sensorial en casa',
+        'para' => 'ninos y adultos',
+        'imagen' => 'img/actividades/musica-ritmo.svg',
+        'resumen' => 'juegos con texturas, luces suaves y sonidos para que la persona explore y responda a lo que siente.',
+        'para_quien' => [
+            'ninos que necesitan estimulacion sensorial',
+            'familias que quieren reforzar en casa lo que se trabaja en la sala multisensorial',
+            'personas que disfrutan de actividades tranquilas con tacto, luz y sonido',
+        ],
+        'materiales' => [
+            'una caja o bolsa de tela',
+            'telas, algodon, una esponja y otras texturas seguras',
+            'una linterna',
+            'una botella plastica pequena cerrada con un poco de arroz',
+        ],
+        'antes_de_empezar' => [
+            'elige un momento tranquilo, sin prisa',
+            'observa sus reacciones: si se asusta o se tapa los oidos, baja la intensidad o termina',
+            'quedate siempre cerca y evita objetos pequenos que pueda llevarse a la boca',
+            'nunca uses luces intermitentes o parpadeantes: pueden provocar convulsiones en algunas personas',
+        ],
+        'detente_si' => [
+            'se ve molesto, llora o se tapa los ojos o los oidos',
+            'tiene una convulsion o se queda ausente de pronto: si dura mas de 5 minutos, llama a emergencias',
+        ],
+        'frecuencia' => '5 a 10 minutos, una o dos veces al dia, en momentos tranquilos. el equipo de apac puede orientarte sobre que estimulos conviene usar.',
+        'relacionados' => [
+            'bebes',
+            'lenguaje',
+        ],
+        'actividades' => [
+            'caja-texturas' => [
+                'nombre' => 'caja de texturas',
+                'duracion' => '5 a 10 minutos',
+                'objetivo' => 'explorar con el tacto y notar diferencias.',
+                'materiales' => [
+                    'caja o bolsa de tela',
+                    'algodon, tela suave, esponja, una hoja de papel',
+                ],
+                'pasos' => [
+                    'reune 4 o 5 objetos de texturas distintas: algodon, tela suave, esponja, una hoja de papel.',
+                    'ponlos dentro de una caja o bolsa de tela.',
+                    'sientense juntos y saca un objeto a la vez.',
+                    'deja que lo toque con las manos y di como se siente: suave, aspero, frio.',
+                    'observa si le gusta o le molesta y sigue con el que mas disfrute.',
+                ],
+                'consejos' => [
+                    'nunca lo fuerces a tocar algo que no quiere.',
+                    'evita botones, bolitas y otros objetos pequenos.',
+                ],
+                'mas_facil' => 'muestra solo 2 texturas y acompana su mano.',
+                'cuidado' => 'supervisa siempre para que no se lleve nada a la boca.',
+            ],
+            'linterna' => [
+                'nombre' => 'luz de linterna en la penumbra',
+                'duracion' => '5 minutos',
+                'objetivo' => 'estimular la vista y la atencion al seguir una luz.',
+                'materiales' => [
+                    'una linterna',
+                    'una pared lisa y clara',
+                ],
+                'pasos' => [
+                    'baja las luces del cuarto, sin dejarlo totalmente a oscuras.',
+                    'sientense frente a una pared lisa y clara.',
+                    'enciende la linterna y proyecta un circulo de luz sobre la pared.',
+                    'mueve la luz despacio de un lado a otro y de arriba hacia abajo, para que la siga con la mirada.',
+                    'haz pausas y hablale: ahi va!.',
+                ],
+                'consejos' => [
+                    'mueve la luz lentamente.',
+                    'con tu ayuda, deja que el mueva la linterna.',
+                ],
+                'mas_facil' => 'manten la luz quieta y espera a que la mire.',
+                'cuidado' => 'nunca apuntes la luz directo a los ojos y no uses luz que parpadee.',
+            ],
+            'musica-ritmo' => [
+                'nombre' => 'musica y ritmo',
+                'duracion' => '5 a 10 minutos',
+                'objetivo' => 'estimular el oido, la atencion y el movimiento.',
+                'materiales' => [
+                    'botella pequena con arroz, bien cerrada',
+                    'olla y cuchara de madera',
+                    'musica suave',
+                ],
+                'pasos' => [
+                    'prepara una sonaja: pon un poco de arroz en una botella pequena, cierrala y pega la tapa con cinta.',
+                    'sientense juntos y pon musica suave.',
+                    'agita la sonaja al ritmo y deja que la persona la agite contigo.',
+                    'golpea suavemente una olla con una cuchara de madera y pidele que te imite.',
+                    'alterna ritmos rapidos y lentos y termina con un momento de silencio.',
+                ],
+                'consejos' => [
+                    'manten el volumen bajo.',
+                    'si ayuda, mueve sus manos al ritmo de la musica.',
+                ],
+                'mas_facil' => 'usa solo la sonaja y un ritmo lento y constante.',
+                'cuidado' => 'verifica que la tapa este bien cerrada y pegada: el arroz puede causar atragantamiento.',
+            ],
+        ],
+    ],
+    'bienestar-emocional' => [
+        'nombre' => 'bienestar emocional y apoyo diario',
+        'para' => 'personas que buscan apoyo cotidiano',
+        'imagen' => 'img/hero.jpg',
+        'resumen' => 'Ideas pequenas para organizar el dia, hacer pausas y pedir apoyo. No diagnostican ni sustituyen la atencion de salud mental.',
+        'para_quien' => [
+            'personas con tristeza, ansiedad o agotamiento que quieren una actividad sencilla',
+            'familiares que buscan acompanamiento respetuoso',
+            'personas que ya reciben atencion y desean conversar con su profesional',
+        ],
+        'materiales' => [
+            'papel y lapiz, si se desean usar',
+            'un espacio tranquilo y seguro',
+            'una persona de confianza, si la persona quiere acompanamiento',
+        ],
+        'antes_de_empezar' => [
+            'pregunta si la persona quiere participar; puede decir que no o detenerse',
+            'elige una actividad corta y flexible',
+            'no cambies medicamentos ni tratamientos por estas actividades',
+            'si hay riesgo inmediato de dano, busca servicios de emergencia de tu localidad',
+        ],
+        'detente_si' => [
+        'la actividad aumenta la angustia o la persona quiere parar',
+        'aparecen ideas de hacerse dano o de no querer vivir: busca ayuda profesional inmediata. si hay peligro, contacta emergencias locales y pide a una persona de confianza que se quede cerca',
+        'hay una reaccion fisica intensa o inesperada',
+        ],
+        'frecuencia' => 'elige una actividad breve cuando resulte comoda. no es un tratamiento para depresion, ansiedad, agotamiento, adicciones ni otros padecimientos.',
+        'relacionados' => [
+            'autismo',
+            'apoyo-profesional',
+        ],
+        'actividades' => [
+            'paso-pequeno' => [
+                'nombre' => 'elegir un paso pequeno',
+                'duracion' => '5 a 10 minutos',
+                'objetivo' => 'hacer mas manejable una tarea cotidiana sin presionar.',
+                'materiales' => [
+                    'papel y lapiz, si se desean usar',
+                ],
+                'pasos' => [
+                    'piensa en una tarea cotidiana que la persona quiera hacer.',
+                    'dividela en un paso breve y concreto.',
+                    'pregunta si quiere intentarlo ahora o en otro momento.',
+                    'al terminar, reconoce el esfuerzo sin calificar el resultado.',
+                ],
+                'consejos' => [
+                    'ofrece opciones y respeta la decision de no participar.',
+                    'una pausa o pedir ayuda tambien son opciones validas.',
+                ],
+                'mas_facil' => 'elige solo una accion de uno o dos minutos.',
+                'cuidado' => 'esta actividad no sustituye psicoterapia, medicamentos ni una valoracion profesional.',
+                'imagen' => 'cuento-preguntas.svg',
+            ],
+            'pausa-presente' => [
+                'nombre' => 'pausa para notar el entorno',
+                'duracion' => '2 a 5 minutos',
+                'objetivo' => 'hacer una pausa y elegir un estimulo del entorno que resulte agradable.',
+                'materiales' => [
+                    'un objeto o sonido agradable, elegido por la persona',
+                ],
+                'pasos' => [
+                    'pregunta si desea hacer una pausa.',
+                    'invitala a mirar un objeto o escuchar un sonido comodo.',
+                    'si quiere, nombren juntos lo que nota.',
+                    'terminen cuando la persona lo prefiera.',
+                ],
+                'consejos' => [
+                    'mantengan los ojos abiertos si eso es mas comodo.',
+                    'si enfocarse en el entorno incomoda, cambien a una actividad distinta.',
+                ],
+                'mas_facil' => 'solo elegir un objeto agradable y mirarlo por unos segundos.',
+                'cuidado' => 'no fuerces respiraciones, silencio, contacto visual ni una emocion determinada.',
+                'imagen' => 'musica-ritmo.svg',
+            ],
+        ],
+    ],
+    'autismo' => [
+        'nombre' => 'comunicacion y preferencias sensoriales',
+        'para' => 'personas autistas y sus familias',
+        'imagen' => 'img/estimulacion-temprana.jpg',
+        'resumen' => 'Apoyos cotidianos para anticipar actividades y explorar preferencias sensoriales con respeto. El autismo no se trata con estos ejercicios.',
+        'para_quien' => [
+            'personas autistas que quieran participar',
+            'familiares o cuidadores que buscan apoyar la comunicacion',
+            'personas que prefieren rutinas claras o ajustar estimulos del entorno',
+        ],
+        'materiales' => [
+            'hojas y lapices de colores',
+            'objetos familiares y seguros que la persona elija',
+        ],
+        'antes_de_empezar' => [
+            'pregunta y respeta como prefiere comunicarse',
+            'no exijas contacto visual, habla, tacto ni participacion',
+            'ofrece opciones y anticipa cambios con palabras o imagenes',
+            'retira luces parpadeantes, sonidos fuertes y objetos pequenos',
+        ],
+        'detente_si' => [
+            'la persona muestra incomodidad, se aleja o pide terminar',
+            'un estimulo provoca dolor, susto o sobrecarga',
+            'hay riesgo de lesion o de llevarse un objeto a la boca',
+        ],
+        'frecuencia' => 'haz pausas breves solo si la persona las desea. consulta al equipo de apoyo para adaptar las actividades a sus preferencias.',
+        'relacionados' => [
+            'sentidos',
+            'lenguaje',
+        ],
+        'actividades' => [
+            'rutina-visual' => [
+                'nombre' => 'preparar una rutina visual',
+                'duracion' => '5 a 10 minutos',
+                'objetivo' => 'hacer visible una secuencia cotidiana elegida por la persona.',
+                'materiales' => [
+                    'papel',
+                    'lapiz o dibujos sencillos',
+                ],
+                'pasos' => [
+                    'elige junto con la persona una actividad conocida.',
+                    'dibujen o escriban dos o tres pasos en orden.',
+                    'coloquen la hoja donde pueda consultarse.',
+                    'pregunta si desea cambiar algun paso.',
+                ],
+                'consejos' => [
+                    'usa palabras o dibujos que la persona entienda.',
+                    'avisa con tiempo si la rutina va a cambiar.',
+                ],
+                'mas_facil' => 'dibuja solo el primer paso y el que sigue.',
+                'cuidado' => 'la rutina es un apoyo opcional; no debe usarse para forzar una conducta.',
+                'imagen' => 'cuento-preguntas.svg',
+            ],
+            'eleccion-sensorial' => [
+                'nombre' => 'elegir una actividad sensorial',
+                'duracion' => '5 minutos',
+                'objetivo' => 'permitir que la persona elija un objeto o textura familiar.',
+                'materiales' => [
+                    'dos objetos grandes y seguros que la persona ya conozca',
+                ],
+                'pasos' => [
+                    'muestra dos opciones a una distancia comoda.',
+                    'pregunta cual prefiere o si no quiere ninguna.',
+                    'deja que explore el objeto a su manera.',
+                    'guarda los objetos cuando la persona lo pida.',
+                ],
+                'consejos' => [
+                    'no toques a la persona ni guies sus manos sin permiso.',
+                    'evita sonidos fuertes, luces directas y texturas desconocidas.',
+                ],
+                'mas_facil' => 'ofrece una sola opcion conocida.',
+                'cuidado' => 'supervisa los objetos y detente si aparece molestia o sobrecarga.',
+                'imagen' => 'caja-texturas.svg',
+            ],
+        ],
+    ],
+    'atencion-rutinas' => [
+        'nombre' => 'atencion y organizacion cotidiana',
+        'para' => 'personas que prefieren apoyos visuales',
+        'imagen' => 'img/lenguaje.jpg',
+        'resumen' => 'Listas cortas y pausas flexibles para organizar tareas. Son ideas de apoyo diario, no tratamiento para TDAH.',
+        'para_quien' => [
+            'personas con TDAH que quieran probar una herramienta practica',
+            'familias que buscan dividir tareas cotidianas',
+            'personas que desean recordar pendientes con apoyos visuales',
+        ],
+        'materiales' => [
+            'papel y lapiz o una pizarra',
+            'reloj o temporizador opcional',
+        ],
+        'antes_de_empezar' => [
+            'elige una tarea real y de interes para la persona',
+            'divide el trabajo en pasos pequenos',
+            'ajusta el tiempo a la edad, la energia y las preferencias',
+            'permite pausas y evita reganos o competencia',
+        ],
+        'detente_si' => [
+            'la persona se frustra o se cansa',
+            'el temporizador le genera presion',
+            'la tarea no es segura para hacerla sin apoyo',
+        ],
+        'frecuencia' => 'usa la herramienta cuando sea util y cambiala si deja de ayudar. no reemplaza una valoracion ni el plan acordado con profesionales.',
+        'relacionados' => [
+            'lenguaje',
+            'bienestar-emocional',
+        ],
+        'actividades' => [
+            'lista-tres-pasos' => [
+                'nombre' => 'hacer una lista de tres pasos',
+                'duracion' => '5 minutos',
+                'objetivo' => 'mostrar una tarea como acciones claras y breves.',
+                'materiales' => [
+                    'papel y lapiz',
+                ],
+                'pasos' => [
+                    'elige una tarea que la persona quiera completar.',
+                    'escribe hasta tres acciones concretas.',
+                    'marca una accion cuando termine, si le sirve.',
+                    'revisa si desea continuar, cambiar o dejarlo para despues.',
+                ],
+                'consejos' => [
+                    'usa instrucciones claras y visibles.',
+                    'divide mas la tarea si todavia parece dificil.',
+                ],
+                'mas_facil' => 'escribe solo el primer paso.',
+                'cuidado' => 'no uses la lista como castigo ni como medida del valor de la persona.',
+                'imagen' => 'nombrar-objetos.svg',
+            ],
+            'pausa-temporizador' => [
+                'nombre' => 'alternar actividad y pausa',
+                'duracion' => '5 a 15 minutos',
+                'objetivo' => 'probar un periodo flexible de actividad seguido de una pausa.',
+                'materiales' => [
+                    'reloj o temporizador opcional',
+                ],
+                'pasos' => [
+                    'pregunta si la persona quiere probar un temporizador.',
+                    'elige un periodo corto que le resulte comodo.',
+                    'al sonar, revisen si desea continuar, descansar o terminar.',
+                    'ajusten el tiempo la proxima vez segun su preferencia.',
+                ],
+                'consejos' => [
+                    'el temporizador puede estar en silencio.',
+                    'no es necesario terminar toda la tarea.',
+                ],
+                'mas_facil' => 'usar una pausa acordada sin reloj.',
+                'cuidado' => 'suspende el temporizador si causa ansiedad o frustracion.',
+                'imagen' => 'musica-ritmo.svg',
+            ],
+        ],
+    ],
+    'memoria-rutinas' => [
+        'nombre' => 'memoria, orientacion y rutinas',
+        'para' => 'personas adultas y personas mayores',
+        'imagen' => 'img/nosotros.jpg',
+        'resumen' => 'Actividades sencillas de conversacion y apoyos para el dia a dia. Parkinson y Alzheimer requieren valoracion y seguimiento profesional.',
+        'para_quien' => [
+            'personas que disfrutan recordar historias o fotos',
+            'familiares que quieren apoyar rutinas de forma respetuosa',
+            'personas que ya tienen orientacion profesional y buscan una actividad compartida',
+        ],
+        'materiales' => [
+            'una foto u objeto familiar elegido por la persona',
+            'calendario o notas grandes opcionales',
+        ],
+        'antes_de_empezar' => [
+            'pregunta si la persona quiere participar',
+            'habla despacio y da tiempo para responder',
+            'no conviertas la actividad en un examen de memoria',
+            'sigue las indicaciones del equipo de salud',
+        ],
+        'detente_si' => [
+            'la persona se angustia o pide parar',
+            'aparecen confusion repentina, debilidad de un lado o cambios bruscos al hablar: busca atencion de emergencia',
+            'hay riesgo de caida o la persona se marea',
+        ],
+        'frecuencia' => 'hazlo en un momento tranquilo y por poco tiempo. estas actividades no detienen ni curan enfermedades de memoria o movimiento.',
+        'relacionados' => [
+            'lenguaje',
+            'movilidad',
+        ],
+        'actividades' => [
+            'conversacion-familiar' => [
+                'nombre' => 'conversar sobre un objeto familiar',
+                'duracion' => '5 a 10 minutos',
+                'objetivo' => 'compartir una conversacion a partir de un objeto elegido.',
+                'materiales' => [
+                    'un objeto o foto familiar, si la persona lo desea',
+                ],
+                'pasos' => [
+                    'invita a la persona a elegir un objeto o foto.',
+                    'pregunta que le gustaria contar sobre el objeto.',
+                    'escucha sin corregir ni poner a prueba los recuerdos.',
+                    'cambien de tema o terminen cuando la persona quiera.',
+                ],
+                'consejos' => [
+                    'acepta respuestas cortas, gestos o silencio.',
+                    'no insistas en recordar fechas o nombres.',
+                ],
+                'mas_facil' => 'mirar juntos la foto sin hacer preguntas.',
+                'cuidado' => 'si el recuerdo causa tristeza o molestia, detengan la conversacion.',
+                'imagen' => 'cuento-preguntas.svg',
+            ],
+            'calendario-visible' => [
+                'nombre' => 'preparar una nota para la rutina',
+                'duracion' => '5 minutos',
+                'objetivo' => 'dejar visible un recordatorio acordado para una actividad cotidiana.',
+                'materiales' => [
+                    'papel y marcador grande',
+                ],
+                'pasos' => [
+                    'pregunta que actividad desea recordar la persona.',
+                    'escribe una nota breve con letras grandes.',
+                    'coloquenla en un sitio visible y seguro.',
+                    'revisa con la persona si quiere cambiarla o retirarla.',
+                ],
+                'consejos' => [
+                    'usa una nota a la vez.',
+                    'acuerda los recordatorios con la persona y su cuidador.',
+                ],
+                'mas_facil' => 'colocar un solo objeto familiar en el lugar acordado.',
+                'cuidado' => 'no ocultes llaves, medicinas ni objetos para controlar a la persona.',
+                'imagen' => 'nombrar-objetos.svg',
+            ],
+        ],
+    ],
+    'bienestar-corporal' => [
+        'nombre' => 'pausas y bienestar corporal',
+        'para' => 'personas con dolor o fatiga',
+        'imagen' => 'img/terapia-fisica.jpg',
+        'resumen' => 'Ideas para organizar descansos y reducir molestias del entorno. No son tratamiento para fibromialgia, migrana ni dolor persistente.',
+        'para_quien' => [
+            'personas con dolor o cansancio que quieren adaptar una actividad cotidiana',
+            'personas con migrana que prefieren preparar un espacio tranquilo',
+            'familias que buscan ofrecer apoyo sin presionar',
+        ],
+        'materiales' => [
+            'silla estable o lugar de descanso',
+            'agua solo si la persona tiene permitido beberla',
+        ],
+        'antes_de_empezar' => [
+            'consulta con un profesional antes de iniciar ejercicios si hay enfermedad, cirugia o dolor persistente',
+            'no hagas ejercicio durante una crisis de migrana',
+            'elige movimientos solo si estan permitidos y son comodos',
+            'respeta el ritmo y los descansos de la persona',
+        ],
+        'detente_si' => [
+            'aumenta el dolor, mareo, falta de aire o nausea',
+            'aparece dolor repentino e intenso o un sintoma nuevo',
+            'la persona desea parar',
+        ],
+        'frecuencia' => 'descansa segun lo necesites. no es necesario completar una actividad ni aumentar movimientos. pide un plan individual a un profesional.',
+        'relacionados' => [
+            'movilidad',
+            'bienestar-emocional',
+        ],
+        'actividades' => [
+            'preparar-descanso' => [
+                'nombre' => 'preparar un espacio de descanso',
+                'duracion' => '5 minutos',
+                'objetivo' => 'hacer mas comodo el entorno segun las preferencias de la persona.',
+                'materiales' => [
+                    'silla o cama estable',
+                    'cortina o antifaz opcional',
+                ],
+                'pasos' => [
+                    'pregunta que cambio le resultaria util.',
+                    'reduce luz o ruido solo si la persona lo prefiere.',
+                    'acomoda apoyos sin restringir el movimiento.',
+                    'revisa si el espacio se siente mejor y cambia lo que haga falta.',
+                ],
+                'consejos' => [
+                    'no uses antifaz si impide pedir ayuda o supervisar con seguridad.',
+                    'ofrece silencio o un sonido suave segun prefiera.',
+                ],
+                'mas_facil' => 'moverse a un sitio tranquilo elegido por la persona.',
+                'cuidado' => 'un dolor de cabeza nuevo, intenso o acompanado de otros sintomas requiere atencion profesional.',
+                'imagen' => 'boca-abajo.svg',
+            ],
+            'movimiento-acordado' => [
+                'nombre' => 'movimiento suave autorizado',
+                'duracion' => '2 a 5 minutos',
+                'objetivo' => 'realizar solo un movimiento cotidiano que el profesional haya autorizado.',
+                'materiales' => [
+                    'silla firme y con respaldo',
+                ],
+                'pasos' => [
+                    'confirma con el terapeuta que el movimiento es adecuado.',
+                    'sientate con apoyo y los pies en el piso.',
+                    'haz un movimiento pequeno dentro de un rango comodo.',
+                    'para y descansa si aparece molestia.',
+                ],
+                'consejos' => [
+                    'no rebotes ni fuerces articulaciones.',
+                    'si no hay un movimiento autorizado, omite esta actividad.',
+                ],
+                'mas_facil' => 'no hacer el movimiento y elegir descanso.',
+                'cuidado' => 'no uses esta guia para tratar dolor, fibromialgia o migrana.',
+                'imagen' => 'brazos-al-frente.svg',
+            ],
+        ],
+    ],
+    'apoyo-profesional' => [
+        'nombre' => 'acompanamiento y apoyo profesional',
+        'para' => 'personas y familias que buscan orientacion',
+        'imagen' => 'img/nosotros.jpg',
+        'resumen' => 'Pasos de apoyo para pedir orientacion. Los trastornos de alimentacion y las adicciones necesitan atencion profesional; no se tratan con ejercicios caseros.',
+        'para_quien' => [
+            'personas con anorexia, bulimia o consumo problematico',
+            'familiares que quieren ofrecer ayuda sin juzgar',
+            'personas que no saben a quien acudir para pedir orientacion',
+        ],
+        'materiales' => [
+            'papel y lapiz opcionales',
+            'un contacto de confianza, si la persona quiere',
+        ],
+        'antes_de_empezar' => [
+            'habla con respeto, sin comentarios sobre peso, comida o culpa',
+            'no indiques dietas, purgas, ejercicio, desintoxicacion ni cambios de medicacion',
+            'no suspendas de golpe alcohol, sedantes ni otras sustancias sin atencion clinica',
+            'busca valoracion con profesionales de salud',
+        ],
+        'detente_si' => [
+            'hay desmayo, dificultad para respirar, convulsion, confusion intensa o peligro inmediato: contacta emergencias locales',
+            'la persona expresa riesgo de hacerse dano o de danar a alguien',
+            'hay sintomas graves tras reducir o suspender una sustancia',
+        ],
+        'frecuencia' => 'el primer paso es contactar a un profesional o servicio de salud. estas actividades solo ayudan a organizar ese contacto y no sustituyen tratamiento.',
+        'relacionados' => [
+            'bienestar-emocional',
+            'memoria-rutinas',
+        ],
+        'actividades' => [
+            'persona-de-confianza' => [
+                'nombre' => 'identificar a una persona de confianza',
+                'duracion' => '5 minutos',
+                'objetivo' => 'elegir con quien hablar o pedir acompanamiento.',
+                'materiales' => [
+                    'telefono o papel opcional',
+                ],
+                'pasos' => [
+                    'pregunta si la persona quiere buscar apoyo.',
+                    'piensen en alguien con quien se sienta segura.',
+                    'acuerden si prefiere llamar, escribir o conversar.',
+                    'respeten si prefiere elegir otro momento.',
+                ],
+                'consejos' => [
+                    'escucha sin juzgar ni presionar.',
+                    'si hay peligro inmediato, contacta servicios de emergencia.',
+                ],
+                'mas_facil' => 'guardar el nombre de una persona o servicio profesional.',
+                'cuidado' => 'no guardes ni compartas informacion de salud sin permiso, salvo una emergencia de seguridad.',
+                'imagen' => 'cuento-preguntas.svg',
+            ],
+            'preparar-consulta' => [
+                'nombre' => 'preparar una consulta profesional',
+                'duracion' => '5 a 10 minutos',
+                'objetivo' => 'anotar una pregunta para una consulta de salud.',
+                'materiales' => [
+                    'papel o telefono',
+                ],
+                'pasos' => [
+                    'elige una duda que la persona quiera consultar.',
+                    'escribela con palabras sencillas.',
+                    'anota el nombre de un servicio de salud o profesional.',
+                    'pide ayuda para hacer la cita si la persona lo desea.',
+                ],
+                'consejos' => [
+                    'no hace falta detallar informacion personal en esta app.',
+                    'lleva la pregunta a un profesional con licencia.',
+                ],
+                'mas_facil' => 'elegir solamente a quien llamar.',
+                'cuidado' => 'no retrases atencion urgente para completar esta actividad.',
+                'imagen' => 'nombrar-objetos.svg',
+            ],
+        ],
+    ],
+];
