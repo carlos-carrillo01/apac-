@@ -25,6 +25,9 @@
 html { scroll-behavior: smooth; }
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: var(--fondo);
     color: var(--tinta);
     font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
@@ -39,8 +42,14 @@ h2 { font-size: clamp(1.35rem, 3vw, 1.8rem); font-weight: 800; }
 h3 { font-size: 1.15rem; font-weight: 700; }
 p { margin: 0 0 1em; }
 :focus-visible { outline: 3px solid var(--morado); outline-offset: 2px; }
+h1::first-letter, h2::first-letter, h3::first-letter,
+.sobrelinea::first-letter, nav a::first-letter, .boton::first-letter,
+.boton-enlace::first-letter, .situacion strong::first-letter,
+.enlace-flecha::first-letter, .situacion-para::first-letter,
+.pie strong::first-letter, .aviso > strong::first-letter { text-transform: uppercase; }
 
 .contenedor { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+main#contenido { flex: 1 0 auto; }
 .saltar { position: absolute; left: -999px; top: 0; background: var(--amarillo); padding: 10px 16px; z-index: 100; }
 .saltar:focus { left: 0; }
 
@@ -180,7 +189,7 @@ nav a.boton { color: #fff; }
 .emoji-grande { font-size: 3rem; }
 
 /* ---------- pie ---------- */
-.pie { background: var(--tinta); color: #cfe0da; padding: 34px 0; font-size: .95rem; }
+.pie { background: var(--tinta); color: #cfe0da; padding: 34px 0; font-size: .95rem; margin-top: auto; }
 .pie strong { color: #fff; display: block; margin-bottom: 6px; }
 .pie p { margin: 0; }
 .pie-interno { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
@@ -237,10 +246,11 @@ nav a.boton { color: #fff; }
 .dato span { color: var(--suave); font-weight: 700; }
 .semana { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 520px; }
 .dia { display: flex; min-width: 0; flex-direction: column; align-items: center; gap: 4px; padding: 8px 2px; border-radius: 14px; background: var(--fondo); border: 2px solid var(--borde); font-weight: 800; color: var(--suave); }
-.dia span { font-size: clamp(.7rem, 2.8vw, .95rem); line-height: 1.2; }
-.dia b { display: grid; place-items: center; flex: 0 0 26px; width: 26px; height: 26px; border-radius: 50%; background: #fff; font-size: .9rem; line-height: 1; }
+.dia > span { font-size: clamp(.7rem, 2.8vw, .95rem); line-height: 1.2; }
+.dia-estado { display: block; width: 100%; max-width: 100%; padding: 4px 3px; border-radius: 999px; background: #fff; font-size: clamp(.58rem, 1.8vw, .72rem); line-height: 1.15; text-align: center; overflow-wrap: anywhere; }
+.estado-corto { display: none; }
 .dia.hecho { background: var(--menta-claro); border-color: var(--menta); color: var(--verde); }
-.dia.hecho b { background: var(--menta); color: #fff; }
+.dia.hecho .dia-estado { background: var(--menta); color: #fff; }
 .dia.hoy { border-color: var(--morado); }
 .registro { display: grid; grid-template-columns: 110px 1fr auto; gap: 16px; align-items: center; margin-bottom: 12px; padding: 12px; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); }
 .registro img { border-radius: 10px; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
@@ -293,6 +303,9 @@ nav a.boton { color: #fff; }
     .opciones { grid-template-columns: minmax(0, 1fr); }
     .semana { gap: 4px; }
     .dia { padding: 8px 1px; font-size: 12px; }
+    .dia-estado { padding: 4px 2px; font-size: clamp(.55rem, 2.7vw, .68rem); }
+    .estado-completo { display: none; }
+    .estado-corto { display: inline; }
     .registro { grid-template-columns: minmax(0, 1fr); }
     .registro img { width: 100%; max-height: 180px; }
     .registro form { grid-column: auto; }

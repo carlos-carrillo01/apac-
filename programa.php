@@ -60,41 +60,13 @@ mostrar_encabezado($programa['nombre'], 'programas');
             <p>elige una guia. puedes descansar o terminar cuando quieras.</p>
         </div>
         <div class="rejilla-tarjetas">
-            <?php if ($slug === 'bebes'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'boca-abajo', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'seguir-juguete', 2, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'alcanzar-agarrar', 3, $hechas); ?>
-            <?php elseif ($slug === 'movilidad'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'brazos-al-frente', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'extension-rodilla', 2, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'pararse-sentarse', 3, $hechas); ?>
-            <?php elseif ($slug === 'lenguaje'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'nombrar-objetos', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'cuento-preguntas', 2, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'soplar-burbujas', 3, $hechas); ?>
-            <?php elseif ($slug === 'sentidos'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'caja-texturas', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'linterna', 2, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'musica-ritmo', 3, $hechas); ?>
-            <?php elseif ($slug === 'bienestar-emocional'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'paso-pequeno', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'pausa-presente', 2, $hechas); ?>
-            <?php elseif ($slug === 'autismo'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'rutina-visual', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'eleccion-sensorial', 2, $hechas); ?>
-            <?php elseif ($slug === 'atencion-rutinas'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'lista-tres-pasos', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'pausa-temporizador', 2, $hechas); ?>
-            <?php elseif ($slug === 'memoria-rutinas'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'conversacion-familiar', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'calendario-visible', 2, $hechas); ?>
-            <?php elseif ($slug === 'bienestar-corporal'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'preparar-descanso', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'movimiento-acordado', 2, $hechas); ?>
-            <?php elseif ($slug === 'apoyo-profesional'): ?>
-                <?php mostrar_tarjeta_actividad($slug, 'persona-de-confianza', 1, $hechas); ?>
-                <?php mostrar_tarjeta_actividad($slug, 'preparar-consulta', 2, $hechas); ?>
-            <?php endif; ?>
+            <?php
+            $numero_actividad = 1;
+            foreach ($programa['actividades'] as $slug_actividad => $actividad):
+                mostrar_tarjeta_actividad($slug, $slug_actividad, $numero_actividad, $hechas);
+                $numero_actividad++;
+            endforeach;
+            ?>
         </div>
 
         <?php if ($usuario): ?>

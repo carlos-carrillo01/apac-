@@ -5,7 +5,7 @@ Aplicacion web sencilla con php, mysql, css y phpmailer. Incluye guias generales
 ## funciones
 
 1. `index.php`: portada responsiva con tarjetas html escritas de forma explicita.
-2. `guia.php`: situaciones y condiciones escritas como enlaces html, sin leer archivos json.
+2. `guia.php`: selector con una tarjeta por cada programa del catalogo php.
 3. `programa.php`: materiales, cuidados, frecuencia y actividades del tema elegido.
 4. `actividad.php`: guia paso a paso y formulario opcional para registrar una practica.
 5. `mi_avance.php`: resumen de practicas guardadas en la cuenta.
@@ -31,7 +31,7 @@ El archivo `config.php` no incluye contrasenas. No subas `config.local.php`, `.e
 
 ## contenido y limites
 
-Los programas y las situaciones ya no se cargan desde `datos/*.json`. Las tarjetas principales se escriben directamente en `index.php` y las situaciones se escriben directamente en `guia.php`. El contenido detallado esta definido en `includes/catalogo.php`.
+Los programas y las situaciones ya no se cargan desde `datos/*.json`. Las tarjetas principales se escriben directamente en `index.php`. El selector de `guia.php` lee el catalogo php para mostrar una tarjeta unica por guia; el contenido detallado de programas y actividades esta definido en `includes/catalogo.php`.
 
 Las actividades son orientativas. No suspendas medicamentos ni sustancias, no cambies tratamientos, no fuerces ejercicios y consulta a un profesional para adaptar los movimientos. Si existe peligro inmediato, contacta los servicios de emergencia locales.
 

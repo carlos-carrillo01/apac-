@@ -55,9 +55,12 @@ mostrar_encabezado('mi avance', 'mi_avance');
                     while ($dia_indice < count($general['semana'])):
                         $dia = $general['semana'][$dia_indice];
                     ?>
-                        <div class="dia <?= $dia['hecho'] ? 'hecho' : '' ?> <?= $dia['hoy'] ? 'hoy' : '' ?>">
+                        <div class="dia <?= $dia['hecho'] ? 'hecho' : '' ?> <?= $dia['hoy'] ? 'hoy' : '' ?>" role="group" aria-label="<?= e($dia['letra']) ?>: <?= $dia['hecho'] ? 'Hecho' : 'Pendiente' ?>">
                             <span><?= e($dia['letra']) ?></span>
-                            <b><?= $dia['hecho'] ? 'listo' : 'pendiente' ?></b>
+                            <strong class="dia-estado">
+                                <span class="estado-completo"><?= $dia['hecho'] ? 'Hecho' : 'Pendiente' ?></span>
+                                <span class="estado-corto" aria-hidden="true"><?= $dia['hecho'] ? 'Hecho' : 'Pend.' ?></span>
+                            </strong>
                         </div>
                     <?php
                         $dia_indice++;
