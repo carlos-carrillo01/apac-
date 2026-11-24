@@ -117,6 +117,7 @@ function enviar_correo($para, $nombre, $asunto, $html)
         $correo->send();
         return true;
     } catch (Throwable $error) {
+        error_log('Fallo al enviar correo con PHPMailer: ' . $error->getMessage());
         return false;
     }
 }
