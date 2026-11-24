@@ -32,15 +32,15 @@ define('DB_USER', apac_config('db_user', 'root'));
 define('DB_PASS', apac_config('db_pass', '1234'));
 define('DB_NAME', apac_config('db_name', 'apac_fresnillo'));
 
-define('SMTP_HOST', apac_config('smtp_host', 'smtp.gmail.com'));
+define('SMTP_HOST', apac_config('smtp_host', 'smtp-relay.brevo.com'));
 define('SMTP_PUERTO', (int) apac_config('smtp_puerto', 587));
-define('SMTP_USUARIO', apac_config('smtp_usuario', 'carloscarrillogonzalez07@gmail.com'));
-define('SMTP_CLAVE', apac_config('smtp_clave', 'bliswtmttvozgylu'));
+define('SMTP_USUARIO', apac_config('smtp_usuario', ''));
+define('SMTP_CLAVE', apac_config('smtp_clave', ''));
 define('CORREO_NOMBRE', apac_config('correo_nombre', 'apac fresnillo'));
 
-// Configuración de API HTTP para Brevo (ideal para InfinityFree y hostings que bloquean SMTP)
+// Configuración de API HTTP de Brevo para uso explícito de enviar_correo_brevo().
 define('BREVO_API_KEY', apac_config('brevo_api_key', ''));
-define('BREVO_REMITENTE', apac_config('brevo_remitente', apac_config('smtp_usuario', 'carloscarrillogonzalez07@gmail.com')));
+define('BREVO_REMITENTE', apac_config('brevo_remitente', ''));
 
 define('APAC_TEL_1', '4939357179');
 define('APAC_TEL_2', '4939357809');

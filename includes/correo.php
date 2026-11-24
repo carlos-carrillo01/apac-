@@ -90,19 +90,11 @@ function enviar_correo_brevo($para, $nombre, $asunto, $html)
     return false;
 }
 
-// envia un correo: primero intenta vía Brevo API (HTTP), y si no está configurado usa SMTP/PHPMailer
+// envia un correo mediante SMTP de Brevo con PHPMailer
 function enviar_correo($para, $nombre, $asunto, $html)
 {
-    // Si Brevo API está configurado, usarlo directamente (evita bloqueos de puertos SMTP en InfinityFree)
-    if (defined('BREVO_API_KEY') && BREVO_API_KEY !== '') {
-        $resultadoBrevo = enviar_correo_brevo($para, $nombre, $asunto, $html);
-        if ($resultadoBrevo) {
-            return true;
-        }
-    }
-
-    // Fallback: Si no hay Brevo o falló, intentar SMTP tradicional con PHPMailer
-    if (!defined('SMTP_USUARIO') || !defined('SMTP_CLAVE') || SMTP_USUARIO === '' || SMTP_CLAVE === '') {
+    if (!defined('SMTP_USUARIO') || !defined('SMTP_CLAVE') || SMTP_USUARIO === '' || SMTP_CLAVE === ''
+        || !defined('BREVO_REMITENTE') || BREVO_REMITENTE === '') {
         return false;
     }
 
@@ -116,7 +108,7 @@ function enviar_correo($para, $nombre, $asunto, $html)
         $correo->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $correo->Port = SMTP_PUERTO;
         $correo->CharSet = 'UTF-8';
-        $correo->setFrom(SMTP_USUARIO, CORREO_NOMBRE);
+        $correo->setFrom(BREVO_REMITENTE, CORREO_NOMBRE);
         $correo->addAddress($para, $nombre);
         $correo->isHTML(true);
         $correo->Subject = $asunto;
