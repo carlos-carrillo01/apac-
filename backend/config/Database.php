@@ -1,6 +1,10 @@
 <?php
 
-require_once __DIR__ . '/../../config.php';
+// config.php ya lo carga el bootstrap; este require_once es por si Database
+// se usa fuera del contexto de la API (doble carga es segura con require_once)
+if (!defined('DB_HOST')) {
+    require_once __DIR__ . '/../../config.php';
+}
 
 class Database {
     private static $conexion = null;

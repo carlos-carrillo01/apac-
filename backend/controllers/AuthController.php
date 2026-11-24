@@ -4,7 +4,6 @@ require_once __DIR__ . '/../models/Usuario.php';
 require_once __DIR__ . '/../utils/Session.php';
 require_once __DIR__ . '/../utils/Response.php';
 require_once __DIR__ . '/../../includes/correo.php';
-
 class AuthController {
     /**
      * Inicia sesión con correo y contraseña
@@ -75,11 +74,17 @@ class AuthController {
             }
 
             Response::exito([
-                'usuario' => $nuevoUsuario,
+                'usuario'    => $nuevoUsuario,
                 'token_csrf' => Session::tokenCsrf()
             ], 'Cuenta creada exitosamente.', 201);
-        } catch (Exception $e) {
+        } catch (mysqli_sql_exception $e) {
+            // Código 1062 = correo duplicado (ya lo comprobamos arriba, pero por seguridad)
+            if ($e->getCode() === 1062) {
+                Response::error('Ese correo ya tiene una cuenta registrada. Por favor inicia sesión.', 409);
+            }
             Response::error('No se pudo crear la cuenta en este momento. Inténtalo más tarde.', 500);
+        } catch (Throwable $e) {
+            Response::error('Error inesperado al crear la cuenta. Inténtalo más tarde.', 500);
         }
     }
 

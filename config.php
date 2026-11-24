@@ -38,6 +38,10 @@ define('SMTP_USUARIO', apac_config('smtp_usuario', 'carloscarrillogonzalez07@gma
 define('SMTP_CLAVE', apac_config('smtp_clave', 'bliswtmttvozgylu'));
 define('CORREO_NOMBRE', apac_config('correo_nombre', 'apac fresnillo'));
 
+// Configuración de API HTTP para Brevo (ideal para InfinityFree y hostings que bloquean SMTP)
+define('BREVO_API_KEY', apac_config('brevo_api_key', ''));
+define('BREVO_REMITENTE', apac_config('brevo_remitente', apac_config('smtp_usuario', 'carloscarrillogonzalez07@gmail.com')));
+
 define('APAC_TEL_1', '4939357179');
 define('APAC_TEL_2', '4939357809');
 define('APAC_HORARIO', 'lunes a viernes, de 8:00 a.m. a 4:00 p.m.');

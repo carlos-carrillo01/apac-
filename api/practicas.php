@@ -1,6 +1,8 @@
 <?php
 
 header('Content-Type: application/json; charset=utf-8');
+require_once __DIR__ . '/../backend/bootstrap.php';
+require_once __DIR__ . '/../backend/utils/Response.php';
 require_once __DIR__ . '/../backend/controllers/PracticaController.php';
 
 $metodo = $_SERVER['REQUEST_METHOD'];

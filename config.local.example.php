@@ -11,4 +11,8 @@ return [
     'smtp_usuario' => '',
     'smtp_clave' => '',
     'correo_nombre' => 'apac fresnillo',
+
+    // Para hosting como InfinityFree (usa API HTTP sin puertos SMTP bloqueados):
+    'brevo_api_key' => '', // Tu clave API de Brevo (xkeysib-...)
+    'brevo_remitente' => '', // El correo que verificaste como remitente en Brevo
 ];
