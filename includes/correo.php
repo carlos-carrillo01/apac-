@@ -6,6 +6,12 @@ require_once __DIR__ . '/../lib/PHPMailer/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
+if (!function_exists('e')) {
+    function e($valor) {
+        return htmlspecialchars((string) $valor, ENT_QUOTES, 'UTF-8');
+    }
+}
+
 // envia un correo por smtp y devuelve true si termina bien
 function enviar_correo($para, $nombre, $asunto, $html)
 {

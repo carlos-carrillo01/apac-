@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>programa | apac fresnillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="app-header"></div>
+    <div id="app-flash" class="contenedor"></div>
+
+    <main id="contenido">
+        <section class="seccion">
+            <div class="contenedor" id="programa-cargando">
+                <p>Cargando información del programa...</p>
+            </div>
+
+            <div class="contenedor" id="programa-contenido" style="display:none;">
+                <a class="regresar" href="guia.html">volver a elegir una guia</a>
+                
+                <article class="principal" id="programa-principal">
+                    <!-- Se inyecta dinámicamente -->
+                </article>
+
+                <div class="aviso aviso-importante" role="note">
+                    <strong>detente y consulta a un profesional si:</strong>
+                    <ul class="lista-simple" id="programa-detente"></ul>
+                </div>
+
+                <div class="dos-columnas">
+                    <section class="caja">
+                        <h2>que necesitas</h2>
+                        <ul class="lista-check" id="programa-materiales"></ul>
+                        <h2 class="espacio-arriba">cada cuanto</h2>
+                        <p id="programa-frecuencia"></p>
+                    </section>
+                    <section class="caja">
+                        <h2>antes de empezar</h2>
+                        <ul class="lista-check" id="programa-antes"></ul>
+                    </section>
+                </div>
+
+                <div class="titulo-seccion izquierda espacio-arriba">
+                    <h2>actividades del programa</h2>
+                    <p>elige una guia. puedes descansar o terminar cuando quieras.</p>
+                </div>
+
+                <div class="rejilla-tarjetas" id="programa-actividades">
+                    <!-- Tarjetas de actividades inyectadas por JS -->
+                </div>
+
+                <div class="caja caja-correo" id="bloque-correo">
+                    <!-- Bloque de envío de correo inyectado por JS -->
+                </div>
+
+                <div class="aviso aviso-siguiente">
+                    <strong>necesitas orientacion?</strong> llama a apac al <a href="tel:4939357179">4939357179</a> o al <a href="tel:4939357809">4939357809</a>. estas ideas no sustituyen la valoracion ni el tratamiento.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="app-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/programa.js"></script>
+    <script>
+        UI.init('programas');
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>guias para practicar en casa | apac fresnillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="app-header"></div>
+    <div id="app-flash" class="contenedor"></div>
+
+    <main id="contenido">
+        <section class="hero">
+            <div class="contenedor hero-interno">
+                <div class="hero-texto">
+                    <span class="sobrelinea">apoyo para las familias</span>
+                    <h1>practica en casa, paso a paso</h1>
+                    <p>encuentra actividades sencillas para hacer en casa, a tu ritmo. elige una guia, revisa sus cuidados y registra tu avance si quieres.</p>
+                    <div class="botones">
+                        <a class="boton boton-grande" href="guia.html">elegir una guia</a>
+                        <a class="boton boton-claro boton-grande" href="#programas">ver programas</a>
+                    </div>
+                </div>
+                <div class="hero-foto">
+                    <img src="img/hero.jpg" alt="una terapeuta acompana a un nino durante una actividad">
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <span class="sobrelinea">asi de facil</span>
+                    <h2>tres pasos para empezar</h2>
+                </div>
+                <div class="pasos">
+                    <article class="paso">
+                        <span class="numero">1</span>
+                        <h3>elige un tema</h3>
+                        <p>selecciona la situacion que mas se parece a lo que buscas.</p>
+                    </article>
+                    <article class="paso">
+                        <span class="numero">2</span>
+                        <h3>revisa la guia</h3>
+                        <p>cada actividad explica que necesitas, como empezar y cuando detenerte.</p>
+                    </article>
+                    <article class="paso">
+                        <span class="numero">3</span>
+                        <h3>avanza a tu ritmo</h3>
+                        <p>puedes hacer una actividad, descansar o pedir orientacion profesional.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion fondo-suave" id="programas">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <span class="sobrelinea">programas en casa</span>
+                    <h2>guias y actividades cotidianas</h2>
+                    <p>son ideas generales para acompanamiento. no diagnostican ni sustituyen la atencion profesional.</p>
+                </div>
+                <!-- Las tarjetas de programas se cargan dinámicamente desde la API -->
+                <div id="contenedor-programas" class="rejilla-tarjetas">
+                    <p>Cargando programas disponibles...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <span class="sobrelinea">atencion presencial</span>
+                    <h2>algunos servicios solo se realizan en apac</h2>
+                    <p>requieren equipo y personal capacitado. no intentes reproducirlos en casa.</p>
+                </div>
+                <div class="rejilla-tarjetas">
+                    <article class="tarjeta">
+                        <img class="foto-fija" src="img/camara-hiperbarica.jpg" alt="equipo de camara hiperbarica" loading="lazy">
+                        <div class="tarjeta-texto">
+                            <h3>camara hiperbarica</h3>
+                            <p>servicio presencial con valoracion y supervision profesional.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="foto-fija" src="img/magnetica.jpg" alt="equipo para atencion especializada" loading="lazy">
+                        <div class="tarjeta-texto">
+                            <h3>terapia magnetica transcraneal</h3>
+                            <p>servicio especializado que requiere valoracion medica.</p>
+                        </div>
+                    </article>
+                    <article class="tarjeta">
+                        <img class="foto-fija" src="img/terapia-acuatica.jpg" alt="terapia en alberca" loading="lazy">
+                        <div class="tarjeta-texto">
+                            <h3>terapia acuatica y disfagia</h3>
+                            <p>requieren instalaciones y atencion de personal capacitado.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion fondo-verde" id="contacto">
+            <div class="contenedor contacto">
+                <div>
+                    <h2>contacto y orientacion</h2>
+                    <p><strong>horario:</strong> lunes a viernes, de 8:00 a.m. a 4:00 p.m.</p>
+                    <p><strong>telefonos:</strong> <a href="tel:4939357179">4939357179</a> y <a href="tel:4939357809">4939357809</a></p>
+                    <p><strong>direccion:</strong> avenida fresnos no. 54, col. luis donaldo colosio, fresnillo, zacatecas</p>
+                </div>
+                <div>
+                    <p><strong>redes:</strong> apac fresnillo en facebook; @apacfresnillo en x e instagram.</p>
+                    <p>si hay riesgo inmediato para una persona, contacta los servicios de emergencia de tu localidad. estas guias no sustituyen una valoracion profesional.</p>
+                    <p class="chico">reg. cofepris 2432035036X00130</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="app-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/inicio.js"></script>
+    <script>
+        UI.init('inicio');
+    </script>
+</body>
+</html>

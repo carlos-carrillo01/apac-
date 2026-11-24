@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iniciar sesion | apac fresnillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="app-header"></div>
+    <div id="app-flash" class="contenedor"></div>
+
+    <main id="contenido">
+        <section class="seccion">
+            <div class="contenedor acceso">
+                <div class="acceso-info">
+                    <span class="sobrelinea">tu cuenta</span>
+                    <h1>inicia sesion</h1>
+                    <p>entra para registrar una practica y consultar tu avance.</p>
+                </div>
+                <div class="caja">
+                    <div id="mensaje-login"></div>
+                    <form id="form-login" class="formulario">
+                        <label for="correo">correo electronico</label>
+                        <input id="correo" name="correo" type="email" autocomplete="email" required>
+
+                        <label for="clave">clave</label>
+                        <input id="clave" name="clave" type="password" autocomplete="current-password" required>
+
+                        <button class="boton boton-grande" type="submit">entrar</button>
+                    </form>
+                    <p class="centrado">no tienes cuenta? <a id="link-registro" href="registro.html">crear una cuenta</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="app-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        UI.init('login');
+    </script>
+</body>
+</html>

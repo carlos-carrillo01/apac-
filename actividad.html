@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>actividad | apac fresnillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="app-header"></div>
+    <div id="app-flash" class="contenedor"></div>
+
+    <main id="contenido">
+        <section class="seccion">
+            <div class="contenedor contenedor-angosto" id="actividad-cargando">
+                <p>Cargando actividad...</p>
+            </div>
+
+            <div class="contenedor contenedor-angosto" id="actividad-contenido" style="display:none;">
+                <a class="regresar" id="link-volver-programa" href="programa.html">volver al programa</a>
+                <span class="etiqueta etiqueta-verde" id="actividad-etiqueta"></span>
+                <h1 id="actividad-titulo"></h1>
+                <p class="objetivo"><strong>objetivo:</strong> <span id="actividad-objetivo"></span></p>
+
+                <img class="foto-actividad" id="actividad-foto" src="" alt="ilustracion de actividad">
+
+                <div id="actividad-cuidado" class="aviso aviso-importante" role="note" style="display:none;"></div>
+
+                <section class="caja">
+                    <h2>que necesitas</h2>
+                    <ul class="lista-check" id="actividad-materiales"></ul>
+                </section>
+
+                <section class="caja">
+                    <h2>paso a paso</h2>
+                    <ol class="linea-tiempo" id="actividad-pasos"></ol>
+                </section>
+
+                <div class="dos-columnas">
+                    <section class="caja">
+                        <h2>consejos</h2>
+                        <ul class="lista-check" id="actividad-consejos"></ul>
+                    </section>
+                    <section class="caja">
+                        <h2>hazlo mas sencillo</h2>
+                        <p id="actividad-facil"></p>
+                    </section>
+                </div>
+
+                <div class="aviso">si aparece dolor, mareo, falta de aire o molestia, detente. consulta el programa completo y pide orientacion profesional.</div>
+
+                <section class="caja caja-registro" id="seccion-registrar">
+                    <h2>registra una practica</h2>
+                    <div id="mensaje-practica"></div>
+                    <div id="contenedor-formulario-practica">
+                        <!-- Renderizado dinámicamente según sesión -->
+                    </div>
+                </section>
+
+                <div class="navegar" id="actividad-navegacion">
+                    <!-- Botones anterior / siguiente -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="app-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/actividad.js"></script>
+    <script>
+        UI.init('programas');
+    </script>
+</body>
+</html>

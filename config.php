@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('America/Mexico_City');
+
 // carga valores privados desde el entorno o desde config.local.php
 $config_local = [];
 $config_privado = __DIR__ . '/config.local.php';

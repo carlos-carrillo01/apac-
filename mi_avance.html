@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mi avance | apac fresnillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="app-header"></div>
+    <div id="app-flash" class="contenedor"></div>
+
+    <main id="contenido">
+        <section class="seccion">
+            <div class="contenedor" id="avance-cargando">
+                <p>Cargando tu avance...</p>
+            </div>
+
+            <div class="contenedor" id="avance-contenido" style="display:none;">
+                <div class="titulo-seccion izquierda">
+                    <span class="sobrelinea">tu progreso</span>
+                    <h1 id="saludo-usuario">hola</h1>
+                    <p>aqui puedes consultar lo que has practicado. cada actividad cuenta, aunque sea corta.</p>
+                </div>
+
+                <div id="mensaje-avance"></div>
+
+                <!-- Estado vacío -->
+                <div id="avance-vacio" class="caja vacio" style="display:none;">
+                    <h2>aun no hay practicas registradas</h2>
+                    <p>elige un programa, consulta una actividad y guarda como te fue.</p>
+                    <a class="boton" href="guia.html">elegir una guia</a>
+                </div>
+
+                <!-- Estado con datos -->
+                <div id="avance-datos" style="display:none;">
+                    <div class="estadisticas">
+                        <div class="dato"><strong id="stat-sesiones">0</strong><span>practicas registradas</span></div>
+                        <div class="dato"><strong id="stat-dias">0</strong><span>dias practicados</span></div>
+                        <div class="dato"><strong id="stat-racha">0</strong><span>dias seguidos</span></div>
+                    </div>
+
+                    <section class="caja">
+                        <h2>tus ultimos siete dias</h2>
+                        <div class="semana" id="grid-semana"></div>
+                    </section>
+
+                    <div class="titulo-seccion izquierda espacio-arriba">
+                        <h2>tus programas</h2>
+                    </div>
+                    <div class="dos-columnas" id="lista-programas-curso"></div>
+
+                    <div class="titulo-seccion izquierda espacio-arriba">
+                        <h2>ultimas practicas</h2>
+                    </div>
+                    <div id="lista-historial"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="app-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/avance.js"></script>
+    <script>
+        UI.init('mi_avance');
+    </script>
+</body>
+</html>

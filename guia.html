@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>elige una guia | apac fresnillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="app-header"></div>
+    <div id="app-flash" class="contenedor"></div>
+
+    <main id="contenido">
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="titulo-seccion izquierda">
+                    <span class="sobrelinea">apoyos para practicar en casa</span>
+                    <h1>¿Qué tipo de actividad buscas?</h1>
+                    <p>Elige por el tipo de apoyo que quieren explorar, no por un diagnóstico. Cada tarjeta abre una guía diferente con sus propias actividades, materiales y cuidados.</p>
+                </div>
+
+                <div id="contenedor-guias" class="rejilla-situaciones">
+                    <p>Cargando guías...</p>
+                </div>
+
+                <div class="aviso espacio-arriba">
+                    <strong>Importante:</strong> son ideas orientativas para casa; no diagnostican ni sustituyen una valoración o tratamiento. Sigue las indicaciones de tus profesionales, participa solo si la persona quiere y detente ante dolor, mareo, falta de aire o angustia.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="app-footer"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/guia.js"></script>
+    <script>
+        UI.init('guia');
+    </script>
+</body>
+</html>
