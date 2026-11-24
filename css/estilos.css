@@ -1,7 +1,4 @@
-/* ============================================================
-   ESTILOS APAC FRESNILLO
-   Colores tomados del logo y del folleto de APAC
-   ============================================================ */
+
 :root {
     --verde: #24594f;
     --verde-medio: #2f7a6b;
@@ -244,14 +241,237 @@ nav a.boton { color: #fff; }
 .dato { background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 20px; text-align: center; box-shadow: var(--sombra); }
 .dato strong { display: block; font-size: 2.4rem; line-height: 1; color: var(--verde); font-weight: 800; }
 .dato span { color: var(--suave); font-weight: 700; }
-.semana { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 520px; }
-.dia { display: flex; min-width: 0; flex-direction: column; align-items: center; gap: 4px; padding: 8px 2px; border-radius: 14px; background: var(--fondo); border: 2px solid var(--borde); font-weight: 800; color: var(--suave); }
-.dia > span { font-size: clamp(.7rem, 2.8vw, .95rem); line-height: 1.2; }
-.dia-estado { display: block; width: 100%; max-width: 100%; padding: 4px 3px; border-radius: 999px; background: #fff; font-size: clamp(.58rem, 1.8vw, .72rem); line-height: 1.15; text-align: center; overflow-wrap: anywhere; }
-.estado-corto { display: none; }
-.dia.hecho { background: var(--menta-claro); border-color: var(--menta); color: var(--verde); }
-.dia.hecho .dia-estado { background: var(--menta); color: #fff; }
-.dia.hoy { border-color: var(--morado); }
+
+.semana {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    max-width: 540px;
+    margin: 10px 0;
+}
+.dia {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 3px;
+    border-radius: 14px;
+    background: var(--fondo);
+    border: 2px solid var(--borde);
+    font-weight: 800;
+    color: var(--suave);
+    text-align: center;
+    transition: all .2s ease;
+}
+.dia-letra {
+    font-size: clamp(.8rem, 2.4vw, .95rem);
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1;
+}
+.dia-indicador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    padding: 4px 2px;
+    border-radius: 999px;
+    background: #fff;
+    font-size: clamp(.65rem, 1.8vw, .75rem);
+    font-weight: 800;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dia-indicador .icono {
+    font-weight: 900;
+}
+.dia.hecho {
+    background: var(--menta-claro);
+    border-color: var(--menta);
+    color: var(--verde);
+}
+.dia.hecho .dia-indicador {
+    background: var(--menta);
+    color: #fff;
+}
+.dia.hoy {
+    border-color: var(--morado);
+    box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.25);
+}
+
+/* ---------- navegación y botones de retorno ---------- */
+.barra-volver {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.boton-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid var(--menta);
+    color: var(--verde);
+    font-weight: 800;
+    font-size: .95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .15s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+.boton-volver:hover {
+    background: var(--menta-claro);
+    color: var(--verde);
+    transform: translateX(-3px);
+}
+.enlace-volver {
+    color: var(--suave);
+    font-weight: 700;
+    font-size: .92rem;
+    text-decoration: none;
+}
+.enlace-volver:hover {
+    color: var(--verde);
+    text-decoration: underline;
+}
+.migas-pan {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: .88rem;
+    font-weight: 700;
+    color: var(--suave);
+    margin-bottom: 12px;
+}
+.migas-pan a {
+    color: var(--verde);
+    text-decoration: none;
+}
+.migas-pan a:hover {
+    text-decoration: underline;
+}
+.migas-pan .miga-actual {
+    color: var(--tinta);
+}
+
+/* ---------- filtros de guías ---------- */
+.filtros-guias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0 28px;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    width: fit-content;
+    max-width: 100%;
+}
+.btn-filtro {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: none;
+    background: transparent;
+    color: var(--suave);
+    font-weight: 700;
+    font-size: .92rem;
+    cursor: pointer;
+    transition: all .15s ease;
+    font-family: inherit;
+}
+.btn-filtro:hover {
+    color: var(--verde);
+    background: var(--menta-claro);
+}
+.btn-filtro.activo {
+    background: var(--verde);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(36, 89, 79, 0.25);
+}
+
+/* ---------- tarjetas modernas de guía ---------- */
+.tarjeta-guia {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-decoration: none;
+    color: var(--tinta);
+}
+.tarjeta-guia:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(36, 89, 79, 0.12);
+}
+.tarjeta-guia-foto {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--menta-claro);
+}
+.tarjeta-guia-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+.tarjeta-guia:hover .tarjeta-guia-foto img {
+    transform: scale(1.05);
+}
+.tarjeta-guia-cuerpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px 20px 20px;
+}
+.tarjeta-guia-cuerpo h3 {
+    margin: 6px 0 8px;
+    font-size: 1.18rem;
+    color: var(--verde);
+    line-height: 1.3;
+}
+.tarjeta-guia-cuerpo p {
+    color: var(--suave);
+    font-size: .94rem;
+    line-height: 1.5;
+    flex: 1;
+    margin-bottom: 16px;
+}
+.tarjeta-guia-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--borde);
+}
+.tarjeta-guia-pie .actividades-badge {
+    font-size: .85rem;
+    color: var(--suave);
+    font-weight: 700;
+}
+.tarjeta-guia-pie .flecha {
+    color: var(--morado);
+    font-weight: 800;
+    font-size: .95rem;
+}
+
 .registro { display: grid; grid-template-columns: 110px 1fr auto; gap: 16px; align-items: center; margin-bottom: 12px; padding: 12px; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); }
 .registro img { border-radius: 10px; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .registro-texto { display: flex; flex-direction: column; gap: 2px; }
@@ -283,32 +503,41 @@ nav a.boton { color: #fff; }
     .registro { grid-template-columns: 72px minmax(0, 1fr); }
 }
 
+@media (max-width: 700px) {
+    .semana { gap: 6px; }
+    .dia { padding: 8px 2px; }
+    .dia-indicador .texto-estado { display: none; } /* Ocultar texto para garantizar que nunca se desborde */
+    .dia-indicador { padding: 4px 0; font-size: .85rem; }
+    .filtros-guias { width: 100%; border-radius: 14px; }
+    .btn-filtro { flex: 1 1 auto; text-align: center; justify-content: center; }
+}
+
 @media (max-width: 480px) {
     body { font-size: 16px; }
     .contenedor, .contenedor-angosto { width: calc(100% - 24px); }
-    .barra-superior { font-size: 12px; overflow-wrap: anywhere; }
-    .logo { font-size: 19px; }
-    .logo img { width: 42px; height: 42px; }
-    nav { gap: 2px; }
-    nav a, .boton-enlace { padding: 7px 8px; font-size: 13px; }
-    nav .boton { padding: 7px 12px; }
-    .seccion { padding: 30px 0; }
-    .hero { padding: 24px 0 30px; }
+    .barra-superior { font-size: 11.5px; overflow-wrap: anywhere; line-height: 1.4; padding: 6px 10px; }
+    .logo { font-size: 18px; }
+    .logo img { width: 40px; height: 40px; }
+    nav { gap: 4px; }
+    nav a, .boton-enlace { padding: 6px 8px; font-size: 13px; }
+    nav .boton { padding: 6px 12px; }
+    .seccion { padding: 28px 0; }
+    .hero { padding: 22px 0 28px; }
     .hero-interno { grid-template-columns: minmax(0, 1fr); }
     .hero-texto p { font-size: 1rem; }
     .rejilla-tarjetas, .rejilla-situaciones, .pasos { grid-template-columns: minmax(0, 1fr); }
     .rejilla-tarjetas { gap: 16px; }
-    .caja, .paso { padding: 18px; }
+    .caja, .paso { padding: 16px; }
     .principal { gap: 16px; }
     .opciones { grid-template-columns: minmax(0, 1fr); }
-    .semana { gap: 4px; }
-    .dia { padding: 8px 1px; font-size: 12px; }
-    .dia-estado { padding: 4px 2px; font-size: clamp(.55rem, 2.7vw, .68rem); }
-    .estado-completo { display: none; }
-    .estado-corto { display: inline; }
+    .semana { gap: 4px; max-width: 100%; }
+    .dia { padding: 6px 1px; border-radius: 10px; }
+    .dia-indicador { width: 24px; height: 24px; border-radius: 50%; padding: 0; margin: 0 auto; font-size: .8rem; }
     .registro { grid-template-columns: minmax(0, 1fr); }
     .registro img { width: 100%; max-height: 180px; }
     .registro form { grid-column: auto; }
     .navegar .boton { flex: 1 1 100%; text-align: center; }
     .pie-interno { grid-template-columns: minmax(0, 1fr); }
+    .barra-volver { gap: 8px; margin-bottom: 16px; }
+    .boton-volver { width: 100%; justify-content: center; padding: 10px 16px; }
 }

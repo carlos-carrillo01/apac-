@@ -19,7 +19,23 @@
             </div>
 
             <div class="contenedor" id="programa-contenido" style="display:none;">
-                <a class="regresar" href="guia.html">volver a elegir una guia</a>
+                <nav class="migas-pan" aria-label="Ruta de navegación">
+                    <a href="index.html">Inicio</a>
+                    <span>›</span>
+                    <a href="guia.html">Guías</a>
+                    <span>›</span>
+                    <span class="miga-actual" id="miga-programa">Programa</span>
+                </nav>
+
+                <div class="barra-volver">
+                    <button type="button" onclick="history.back()" class="boton-volver" aria-label="Volver a la página anterior">
+                        <span>←</span> Volver atrás
+                    </button>
+                    <a href="guia.html" class="boton-volver">
+                        <span>📚</span> Ver todas las guías
+                    </a>
+                    <a href="index.html" class="enlace-volver">Ir al Inicio</a>
+                </div>
                 
                 <article class="principal" id="programa-principal">
                     <!-- Se inyecta dinámicamente -->

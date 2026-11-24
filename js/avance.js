@@ -46,15 +46,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('stat-dias').textContent = general.dias;
             document.getElementById('stat-racha').textContent = general.racha;
 
-            // Grilla de los últimos 7 días
+            // Grilla de los últimos 7 días con indicadores sin desborde
             const gridSemana = document.getElementById('grid-semana');
             gridSemana.innerHTML = general.semana.map(d => `
-                <div class="dia ${d.hecho ? 'hecho' : ''} ${d.hoy ? 'hoy' : ''}" role="group" aria-label="${API.escapar(d.letra)}: ${d.hecho ? 'Hecho' : 'Pendiente'}">
-                    <span>${API.escapar(d.letra)}</span>
-                    <strong class="dia-estado">
-                        <span class="estado-completo">${d.hecho ? 'Hecho' : 'Pendiente'}</span>
-                        <span class="estado-corto" aria-hidden="true">${d.hecho ? 'Hecho' : 'Pend.'}</span>
-                    </strong>
+                <div class="dia ${d.hecho ? 'hecho' : ''} ${d.hoy ? 'hoy' : ''}" role="group" aria-label="${API.escapar(d.letra)}: ${d.hecho ? 'Completado' : 'Pendiente'}">
+                    <span class="dia-letra">${API.escapar(d.letra)}</span>
+                    <div class="dia-indicador" title="${d.hecho ? 'Completado' : 'Pendiente'}">
+                        <span class="icono">${d.hecho ? '✓' : '•'}</span>
+                        <span class="texto-estado">${d.hecho ? 'Hecho' : 'Pend.'}</span>
+                    </div>
                 </div>
             `).join('');
 

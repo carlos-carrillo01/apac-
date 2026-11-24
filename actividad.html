@@ -19,7 +19,25 @@
             </div>
 
             <div class="contenedor contenedor-angosto" id="actividad-contenido" style="display:none;">
-                <a class="regresar" id="link-volver-programa" href="programa.html">volver al programa</a>
+                <nav class="migas-pan" aria-label="Ruta de navegación">
+                    <a href="index.html">Inicio</a>
+                    <span>›</span>
+                    <a href="guia.html">Guías</a>
+                    <span>›</span>
+                    <a id="miga-link-programa" href="programa.html">Programa</a>
+                    <span>›</span>
+                    <span class="miga-actual" id="miga-actividad">Actividad</span>
+                </nav>
+
+                <div class="barra-volver">
+                    <button type="button" onclick="history.back()" class="boton-volver" aria-label="Volver atrás">
+                        <span>←</span> Volver atrás
+                    </button>
+                    <a class="boton-volver" id="link-volver-programa" href="programa.html">
+                        <span>📋</span> Ver programa completo
+                    </a>
+                    <a href="index.html" class="enlace-volver">Ir al Inicio</a>
+                </div>
                 <span class="etiqueta etiqueta-verde" id="actividad-etiqueta"></span>
                 <h1 id="actividad-titulo"></h1>
                 <p class="objetivo"><strong>objetivo:</strong> <span id="actividad-objetivo"></span></p>

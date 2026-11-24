@@ -7,11 +7,34 @@ class CatalogoController {
     /**
      * Lista todos los programas disponibles con información resumida
      */
+    private static function obtenerMetadatos($slug) {
+        $metadatos = [
+            'bebes' => ['cat' => 'ninos', 'cat_nom' => 'Bebés y Niños', 'img' => 'img/estimulacion-temprana.jpg'],
+            'sentidos' => ['cat' => 'ninos', 'cat_nom' => 'Bebés y Niños', 'img' => 'img/camara-hiperbarica.jpg'],
+            'autismo' => ['cat' => 'ninos', 'cat_nom' => 'Bebés y Niños', 'img' => 'img/estimulacion-temprana.jpg'],
+            'movilidad' => ['cat' => 'movilidad', 'cat_nom' => 'Movilidad y Fuerza', 'img' => 'img/terapia-fisica.jpg'],
+            'bienestar-corporal' => ['cat' => 'movilidad', 'cat_nom' => 'Movilidad y Fuerza', 'img' => 'img/terapia-acuatica.jpg'],
+            'lenguaje' => ['cat' => 'comunicacion', 'cat_nom' => 'Comunicación y Habla', 'img' => 'img/lenguaje.jpg'],
+            'comunicacion-alternativa' => ['cat' => 'comunicacion', 'cat_nom' => 'Comunicación y Habla', 'img' => 'img/lenguaje.jpg'],
+            'atencion-rutinas' => ['cat' => 'adultos-rutinas', 'cat_nom' => 'Rutinas y Adultos', 'img' => 'img/magnetica.jpg'],
+            'bienestar-emocional' => ['cat' => 'adultos-rutinas', 'cat_nom' => 'Rutinas y Adultos', 'img' => 'img/hero.jpg'],
+            'memoria-rutinas' => ['cat' => 'adultos-rutinas', 'cat_nom' => 'Rutinas y Adultos', 'img' => 'img/nosotros.jpg'],
+            'apoyo-profesional' => ['cat' => 'adultos-rutinas', 'cat_nom' => 'Rutinas y Adultos', 'img' => 'img/nosotros.jpg'],
+        ];
+
+        return $metadatos[$slug] ?? ['cat' => 'general', 'cat_nom' => 'General', 'img' => 'img/hero.jpg'];
+    }
+
+    /**
+     * Lista todos los programas disponibles con información resumida
+     */
     public static function listar() {
         $todos = Catalogo::todos();
         $lista = [];
 
         foreach ($todos as $slug => $programa) {
+            $meta = self::obtenerMetadatos($slug);
+
             $lista[] = [
                 'slug' => $slug,
                 'nombre' => $programa['nombre'],
@@ -19,7 +42,10 @@ class CatalogoController {
                 'resumen' => $programa['resumen'],
                 'color' => $programa['color'] ?? 'verde',
                 'frecuencia' => $programa['frecuencia'],
-                'total_actividades' => count($programa['actividades'])
+                'total_actividades' => count($programa['actividades']),
+                'categoria' => $meta['cat'],
+                'categoria_nombre' => $meta['cat_nom'],
+                'imagen' => $programa['imagen'] ?? $meta['img']
             ];
         }
 
@@ -35,6 +61,8 @@ class CatalogoController {
         if (!$programa) {
             Response::error('Programa no encontrado.', 404);
         }
+
+        $meta = self::obtenerMetadatos($slug);
 
         // Formatear actividades con su slug e ilustración
         $actividades = [];
@@ -54,7 +82,9 @@ class CatalogoController {
             'slug' => $slug,
             'nombre' => $programa['nombre'],
             'para' => $programa['para'] ?? '',
-            'imagen' => $programa['imagen'] ?? 'img/estimulacion-temprana.jpg',
+            'imagen' => $programa['imagen'] ?? $meta['img'],
+            'categoria' => $meta['cat'],
+            'categoria_nombre' => $meta['cat_nom'],
             'resumen' => $programa['resumen'],
             'frecuencia' => $programa['frecuencia'],
             'materiales' => $programa['materiales'],

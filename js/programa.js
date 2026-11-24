@@ -24,6 +24,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         const programa = resProg.programa;
         document.title = `${programa.nombre} | apac fresnillo`;
 
+        const migaPrograma = document.getElementById('miga-programa');
+        if (migaPrograma) {
+            migaPrograma.textContent = programa.nombre;
+        }
+
         // Obtener estado de autenticación y prácticas realizadas
         const sesion = await API.iniciar();
         let hechas = {};

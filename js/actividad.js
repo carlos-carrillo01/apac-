@@ -27,10 +27,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         document.title = `${act.nombre} | apac fresnillo`;
 
-        // Configurar enlace volver
+        // Configurar enlace volver y migas de pan
         const linkVolver = document.getElementById('link-volver-programa');
-        linkVolver.href = `programa.html?p=${encodeURIComponent(slugPrograma)}`;
-        linkVolver.textContent = `volver al programa: ${programa.nombre}`;
+        if (linkVolver) {
+            linkVolver.href = `programa.html?p=${encodeURIComponent(slugPrograma)}`;
+            linkVolver.innerHTML = `<span>📋</span> Programa: ${API.escapar(programa.nombre)}`;
+        }
+
+        const migaLinkPrograma = document.getElementById('miga-link-programa');
+        if (migaLinkPrograma) {
+            migaLinkPrograma.href = `programa.html?p=${encodeURIComponent(slugPrograma)}`;
+            migaLinkPrograma.textContent = programa.nombre;
+        }
+
+        const migaActividad = document.getElementById('miga-actividad');
+        if (migaActividad) {
+            migaActividad.textContent = act.nombre;
+        }
 
         // Textos y etiquetas principales
         document.getElementById('actividad-etiqueta').textContent = `actividad ${act.posicion} de ${act.total} | ${act.duracion}`;

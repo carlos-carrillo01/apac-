@@ -15,13 +15,44 @@
     <main id="contenido">
         <section class="seccion">
             <div class="contenedor">
+                <nav class="migas-pan" aria-label="Ruta de navegación">
+                    <a href="index.html">Inicio</a>
+                    <span>›</span>
+                    <span class="miga-actual">Guías para Casa</span>
+                </nav>
+
+                <div class="barra-volver">
+                    <a href="index.html" class="boton-volver">
+                        <span>←</span> Volver al Inicio
+                    </a>
+                </div>
+
                 <div class="titulo-seccion izquierda">
                     <span class="sobrelinea">apoyos para practicar en casa</span>
                     <h1>¿Qué tipo de actividad buscas?</h1>
                     <p>Elige por el tipo de apoyo que quieren explorar, no por un diagnóstico. Cada tarjeta abre una guía diferente con sus propias actividades, materiales y cuidados.</p>
                 </div>
 
-                <div id="contenedor-guias" class="rejilla-situaciones">
+                <!-- Filtros por categoría / etapa -->
+                <div class="filtros-guias" role="tablist" aria-label="Filtrar guías por categoría">
+                    <button type="button" class="btn-filtro activo" data-categoria="todos" role="tab" aria-selected="true">
+                        <span>🌟</span> Todos
+                    </button>
+                    <button type="button" class="btn-filtro" data-categoria="ninos" role="tab" aria-selected="false">
+                        <span>👶</span> Bebés y Niños
+                    </button>
+                    <button type="button" class="btn-filtro" data-categoria="movilidad" role="tab" aria-selected="false">
+                        <span>🏃</span> Movilidad y Fuerza
+                    </button>
+                    <button type="button" class="btn-filtro" data-categoria="comunicacion" role="tab" aria-selected="false">
+                        <span>💬</span> Comunicación y Habla
+                    </button>
+                    <button type="button" class="btn-filtro" data-categoria="adultos-rutinas" role="tab" aria-selected="false">
+                        <span>🧠</span> Rutinas y Adultos
+                    </button>
+                </div>
+
+                <div id="contenedor-guias" class="rejilla-tarjetas">
                     <p>Cargando guías...</p>
                 </div>
 
